@@ -1,32 +1,32 @@
-@import "int";
+@import "settings";
 
 $positions: top, left, right, bottom;
-$bar: $int solid;
+$bar: $intPX solid;
 
 @each $pos in $positions {
-    .sw-margin {
-        margin: $int;
+    .#{$p}margin {
+        margin: $intPX;
     }
-    .sw-margin-#{$pos} {
-        margin-#{$pos}: $int;
+    .#{$p}margin-#{$pos} {
+        margin-#{$pos}: $intPX;
     }
 
-    .sw-padding {
-        padding: $int;
+    .#{$p}padding {
+        padding: $intPX;
     }
-    .sw-padding-#{$pos} {
-        padding-#{$pos}: $int;
+    .#{$p}padding-#{$pos} {
+        padding-#{$pos}: $intPX;
     }
     @for $i from 1 through 5 {
-        .sw-padding#{$i} {
+        .#{$p}padding#{$i} {
             padding: #{$i}#{"%"}
         }
-        .sw-padding#{$i}-#{$pos} {
+        .#{$p}padding#{$i}-#{$pos} {
             padding-#{$pos}: #{$i}#{"%"}
         }
     }
 
-    .sw-bar-#{$pos} {
+    .#{$p}bar-#{$pos} {
         border-#{$pos}: $bar;
         @if $pos == "top" {
             width: 100%;
