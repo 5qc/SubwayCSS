@@ -1,5 +1,5 @@
-@import "int";
 @import "positions";
+@import "settings";
 
 $colors: (
     yellow: #fdb400,
@@ -26,8 +26,8 @@ $green-yellow-s: linear-gradient(to right, $green 0%, $green 50%, $yellow 50%) 5
 $green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%) 5;
 
 @each $name, $value in $colors {
-    .sw-button.sw-#{$name},
-    .sw-button-shadow.sw-#{$name} {
+    .#{$p}button.#{$p}#{$name},
+    .#{$p}button-shadow.#{$p}#{$name} {
         background: $value;
         border-color: $value;
         @if $name == "dark-green" {
@@ -35,88 +35,88 @@ $green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%
         }
     }
 
-    .sw-#{$name} {
+    .#{$p}#{$name} {
         background: $value;
         @if $name == "dark-green" {
             color: white;
         }
     }
-    .sw-text-#{$name} {
+    .#{$p}text-#{$name} {
         color: $value;
     }
 
-    .sw-modal.sw-#{$name} .sw-modal-content {
+    .#{$p}modal.#{$p}#{$name} .#{$p}modal-content {
         background: $value;
     }
 
-    .sw-navbar.sw-#{$name},
-    .sw-navbar-fixed.sw-#{$name} {
+    .#{$p}navbar.#{$p}#{$name},
+    .#{$p}navbar-fixed.#{$p}#{$name} {
         background: rgba($value, 0.75);
     }
 
     @each $pos in $positions {
-        .sw-#{$name}.sw-bar-#{$pos},
-        .sw-#{$name}.sw-bar-#{$pos}-fixed {
+        .#{$p}#{$name}.#{$p}bar-#{$pos},
+        .#{$p}#{$name}.#{$p}bar-#{$pos}-fixed {
             background: none;
             border-color: $value;
         }
     }
 
-    .sw-container {
-        padding: $int;
+    .#{$p}container {
+        padding: $intPX;
         position: relative;
     }
-    .sw-container.sw-#{$name} {
+    .#{$p}container.#{$p}#{$name} {
         @if $name == "dark-green" {
             color: white;
         }
     }
-    .sw-container .sw-top {
+    .#{$p}container .#{$p}top {
         position: absolute;
         top: 5px;
         left: 50%;
         transform: translate(-50%, -0%);
         text-align: center;
     }
-    .sw-container .sw-topleft {
+    .#{$p}container .#{$p}topleft {
         position: absolute;
         top: 5px;
         left: 5px;
         text-align: left;
     }
-    .sw-container .sw-topright {
+    .#{$p}container .#{$p}topright {
         position: absolute;
         top: 5px;
         right: 5px;
         text-align: right;
     }
-    .sw-container .sw-bottom {
+    .#{$p}container .#{$p}bottom {
         position: absolute;
         bottom: 5px;
         left: 50%;
         transform: translate(-50%, -0%);
         text-align: center;
     }
-    .sw-container .sw-bottomleft {
+    .#{$p}container .#{$p}bottomleft {
         position: absolute;
         bottom: 5px;
         left: 5px;
         text-align: left;
     }
-    .sw-container .sw-bottomright {
+    .#{$p}container .#{$p}bottomright {
         position: absolute;
         bottom: 5px;
         right: 5px;
         text-align: right;
     }
-    .sw-container .sw-left {
+    .#{$p}container .#{$p}left {
         position: absolute;
         top: 50%;
         left: 5px;
         transform: translate(-0%, -50%);
         text-align: left;
     }
-    .sw-container .sw-right {
+    .#{$p}container .#{$p}right {
         position: absolute;
         top: 50%;
         right: 5px;
@@ -124,23 +124,23 @@ $green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%
         text-align: right;
     }
 
-    .sw-select,
-    .sw-select * {
+    .#{$p}select,
+    .#{$p}select * {
         font-family: "Roboto";
         font-weight: 300;
     }
 
-    .sw-select {
+    .#{$p}select {
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
         border-radius: 3px;
         border: 2px solid white;
     }
-    .sw-select:focus {
+    .#{$p}select:focus {
         outline: none;
     }
-    .sw-select.sw-#{$name} {
+    .#{$p}select.#{$p}#{$name} {
         border: 2px solid $value;
         @if $name == "dark-green" {
             color: white;
@@ -148,15 +148,22 @@ $green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%
     }
 }
 
-.sw-text-yellow-green {
+.#{$p}text-yellow-green {
     background: $yellow-green;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.sw-text-green-yellow {
+.#{$p}text-green-yellow {
     background: $green-yellow;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+a:link,
+a:hover,
+a:visited {
+    color: #00572d;
+    text-decoration: underline;
 }
