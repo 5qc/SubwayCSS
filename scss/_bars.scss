@@ -1,0 +1,61 @@
+@import "int";
+
+$bar: #{$int} solid;
+
+.sw-bar-top-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-top: $bar;
+    width: 100%;
+}
+.sw-bar-left-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-left: $bar;
+    height: 100%;
+}
+.sw-bar-bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-bottom: $bar;
+    width: 100%;
+}
+.sw-bar-right-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-right: $bar;
+    height: 100%;
+}
+
+.sw-yellow-green.sw-bar-top,
+.sw-yellow-green.sw-bar-bottom,
+.sw-yellow-green.sw-bar-top-fixed,
+.sw-yellow-green.sw-bar-bottom-fixed {
+    background: none;
+    border-image: var(--yellow-green-s);
+}
+.sw-yellow-green.sw-bar-left,
+.sw-yellow-green.sw-bar-right,
+.sw-yellow-green.sw-bar-left-fixed,
+.sw-yellow-green.sw-bar-right-fixed {
+    background: none;
+    border-image: var(--yellow-green-s-b);
+}
+.sw-green-yellow.sw-bar-top,
+.sw-green-yellow.sw-bar-bottom,
+.sw-green-yellow.sw-bar-top-fixed,
+.sw-green-yellow.sw-bar-bottom-fixed {
+    background: none;
+    border-image: var(--green-yellow-s);
+}
+.sw-green-yellow.sw-bar-left,
+.sw-green-yellow.sw-bar-right,
+.sw-green-yellow.sw-bar-left-fixed,
+.sw-green-yellow.sw-bar-right-fixed {
+    background: none;
+    border-image: var(--green-yellow-s-b);
+}
