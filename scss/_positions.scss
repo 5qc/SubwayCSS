@@ -1,0 +1,38 @@
+@import "int";
+
+$positions: top, left, right, bottom;
+
+@each $pos in $positions {
+    .sw-margin {
+        margin: $int;
+    }
+    .sw-margin-#{$pos} {
+        margin-#{$pos}: $int;
+    }
+
+    .sw-padding {
+        padding: $int;
+    }
+    .sw-padding-#{$pos} {
+        padding-#{$pos}: $int;
+    }
+    @for $i from 1 through 5 {
+        .sw-padding#{$i} {
+            padding: #{$i}#{"%"}
+        }
+        .sw-padding#{$i}-#{$pos} {
+            padding-#{$pos}: #{$i}#{"%"}
+        }
+    }
+
+    .sw-bar-#{$pos} {
+        border-#{$pos}: var(--bar);
+        @if $pos == "top" {
+            width: 100%;
+        } @else if $pos == "bottom" {
+            width: 100%;
+        } @else {
+            height: 100%;
+        }
+    }
+}
