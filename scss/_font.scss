@@ -1,16 +1,5 @@
 @import "settings";
 
-$fontSizes: (
-    tiny: 10px,
-    small: 12px,
-    medium: 16px,
-    large: 18px,
-    xlarge: 24px,
-    xxlarge: 36px,
-    xxxlarge: 48px,
-    jumbo: 64px
-);
-
 .#{$p}font-light {
     font-family: "Unisect Light", sans-serif;
     font-weight: 300;
