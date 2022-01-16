@@ -1,19 +1,21 @@
-.sw-round-small {
+@import "settings";
+
+.#{$p}round-small {
     border-radius: 2px;
 }
-.sw-round,
-.sw-round-medium {
+.#{$p}round,
+.#{$p}round-medium {
     border-radius: 5px;    
 }
-.sw-round-large {
+.#{$p}round-large {
     border-radius: 10px;
 }
-.sw-round-xlarge {
+.#{$p}round-xlarge {
     border-radius: 20px;
 }
-.sw-round-xxlarge {
+.#{$p}round-xxlarge {
     border-radius: 40px;
 }
-.sw-circle {
+.#{$p}circle {
     border-radius: 50%;
 }
