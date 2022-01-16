@@ -13,23 +13,10 @@
 @import "positions";
 @import "table";
 
-:root {
-    --font: "Roboto", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --yellow: #FDB400;
-    --green: #008C2B;
-    --red: #FF5C39;
-    --yellow-green: linear-gradient(to right, var(--yellow), var(--green));
-    --yellow-green-s: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 50%, var(--green) 50%) 5;
-    --yellow-green-s-b: linear-gradient(to bottom, var(--yellow) 0%, var(--yellow) 50%, var(--green) 50%) 5;
-    --green-yellow: linear-gradient(to right, var(--green), var(--yellow));
-    --green-yellow-s: linear-gradient(to right, var(--green) 0%, var(--green) 50%, var(--yellow) 50%) 5;
-    --green-yellow-s-b: linear-gradient(to bottom, var(--green) 0%, var(--green) 50%, var(--yellow) 50%) 5;
-}
-
 body {
     margin: 0;
     font-size: 16px;
-    font-family: var(--font);
+    font-family: $font;
     font-weight: $fw;
 }
 
@@ -73,20 +60,6 @@ a:visited {
     border-radius: 50%;
 }
 
-/* Gradients */
-.sw-text-yellow-green {
-    background: var(--yellow-green);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.sw-text-green-yellow {
-    background: var(--green-yellow);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 /** Images **/
 img.sw-bordered {
     border: 1px solid $gray;
@@ -99,26 +72,4 @@ img.sw-bordered {
 }
 .sw-wide {
     letter-spacing: 5px;
-}
-
-/** Fonts **/
-@font-face {
-    font-family: "Unisect Light";
-    src: url("https://cdn.glitch.global/eb49ccc8-ffaa-44bb-8f04-39053cb25379/Unisect%20Light.woff?v=1642223904627") format("woff");
-}
-@font-face {
-    font-family: "Unisect";
-    src: url("https://cdn.glitch.global/eb49ccc8-ffaa-44bb-8f04-39053cb25379/Unisect.woff?v=1642223904542") format("woff");
-}
-@font-face {
-    font-family: "Unisect Oblique";
-    src: url("https://cdn.glitch.global/eb49ccc8-ffaa-44bb-8f04-39053cb25379/Unisect%20Oblique.woff?v=1642223904440") format("woff");
-}
-@font-face {
-    font-family: "Unisect Bold";
-    src: url("https://cdn.glitch.global/eb49ccc8-ffaa-44bb-8f04-39053cb25379/Unisect%20Bold.woff?v=1642223904497") format("woff");
-}
-@font-face {
-    font-family: "Unisect Black";
-    src: url("https://cdn.glitch.global/eb49ccc8-ffaa-44bb-8f04-39053cb25379/Unisect%20Black%20(1).woff?v=1642225026568") format("woff");
 }
