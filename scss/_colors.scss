@@ -1,0 +1,141 @@
+@import "positions";
+
+$colors: (
+    yellow: #fdb400,
+    green: #008c2b,
+    red: #df0000,
+    dark-green: #00491e,
+    gray: #c7c6c6,
+    white: #fff,
+    black: #000
+);
+$yellow: #fdb400;
+$green: #008c2b;
+$red: #df0000;
+$dark-green: #00491e;
+$gray: #c7c6c6;
+$white: #fff;
+$black: #000;
+
+@each $name, $value in $colors {
+    .sw-button.sw-#{$name},
+    .sw-button-shadow.sw-#{$name} {
+        background: $value;
+        border-color: $value;
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+
+    .sw-#{$name} {
+        background: $value;
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+    .sw-text-#{$name} {
+        color: $value;
+    }
+
+    .sw-modal.sw-#{$name} .sw-modal-content {
+        background: $value;
+    }
+
+    .sw-navbar.sw-#{$name},
+    .sw-navbar-fixed.sw-#{$name} {
+        background: rgba($value, 0.75);
+    }
+
+    @each $pos in $positions {
+        .sw-#{$name}.sw-bar-#{$pos},
+        .sw-#{$name}.sw-bar-#{$pos}-fixed {
+            background: none;
+            border-color: $value;
+        }
+    }
+
+    .sw-container {
+        padding: var(--int);
+        position: relative;
+    }
+    .sw-container.sw-#{$name} {
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+    .sw-container .sw-top {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        text-align: center;
+    }
+    .sw-container .sw-topleft {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        text-align: left;
+    }
+    .sw-container .sw-topright {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        text-align: right;
+    }
+    .sw-container .sw-bottom {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        text-align: center;
+    }
+    .sw-container .sw-bottomleft {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        text-align: left;
+    }
+    .sw-container .sw-bottomright {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        text-align: right;
+    }
+    .sw-container .sw-left {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translate(-0%, -50%);
+        text-align: left;
+    }
+    .sw-container .sw-right {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translate(-0%, -50%);
+        text-align: right;
+    }
+
+    .sw-select,
+    .sw-select * {
+        font-family: "Roboto";
+        font-weight: 300;
+    }
+
+    .sw-select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border-radius: 3px;
+        border: 2px solid white;
+    }
+    .sw-select:focus {
+        outline: none;
+    }
+    .sw-select.sw-#{$name} {
+        border: 2px solid $value;
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+}
