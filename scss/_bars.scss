@@ -1,6 +1,7 @@
+@import "colors";
 @import "int";
 
-$bar: #{$int} solid;
+$bar: $int solid;
 
 .sw-bar-top-fixed {
     position: fixed;
@@ -36,26 +37,26 @@ $bar: #{$int} solid;
 .sw-yellow-green.sw-bar-top-fixed,
 .sw-yellow-green.sw-bar-bottom-fixed {
     background: none;
-    border-image: var(--yellow-green-s);
+    border-image: $yellow-green-s;
 }
 .sw-yellow-green.sw-bar-left,
 .sw-yellow-green.sw-bar-right,
 .sw-yellow-green.sw-bar-left-fixed,
 .sw-yellow-green.sw-bar-right-fixed {
     background: none;
-    border-image: var(--yellow-green-s-b);
+    border-image: $yellow-green-s-b;
 }
 .sw-green-yellow.sw-bar-top,
 .sw-green-yellow.sw-bar-bottom,
 .sw-green-yellow.sw-bar-top-fixed,
 .sw-green-yellow.sw-bar-bottom-fixed {
     background: none;
-    border-image: var(--green-yellow-s);
+    border-image: $green-yellow-s;
 }
 .sw-green-yellow.sw-bar-left,
 .sw-green-yellow.sw-bar-right,
 .sw-green-yellow.sw-bar-left-fixed,
 .sw-green-yellow.sw-bar-right-fixed {
     background: none;
-    border-image: var(--green-yellow-s-b);
+    border-image: $green-yellow-s-b;
 }
