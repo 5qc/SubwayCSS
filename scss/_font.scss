@@ -1,3 +1,5 @@
+@import "settings";
+
 $font: "Roboto", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $fontSizes: (
     tiny: 10px,
@@ -11,35 +13,52 @@ $fontSizes: (
 );
 $fw: 300;
 
-.sw-font-light {
+.#{$p}font-light {
     font-family: "Unisect Light", sans-serif;
     font-weight: 300;
 }
-.sw-font {
+.#{$p}font {
     font-family: "Unisect", sans-serif;
 }
-.sw-font-bold {
+.#{$p}font-bold {
     font-family: "Unisect Bold", sans-serif;
     font-weight: 700;
 }
-.sw-font-black {
+.#{$p}font-black {
     font-family: "Unisect Black", sans-serif;
     font-weight: 900;
 }
-.sw-font-italic {
+.#{$p}font-italic {
     font-family: "Unisect Oblique", sans-serif;
     font-style: italic;
 }
-.sw-font-light,
-.sw-font,
-.sw-font-bold,
-.sw-font-black,
-.sw-font-italic {
+.#{$p}font-light,
+.#{$p}font,
+.#{$p}font-bold,
+.#{$p}font-black,
+.#{$p}font-italic {
     letter-spacing: -1px;
 }
 
+.#{$p}center {
+    text-align: center;
+}
+.#{$p}left {
+    text-align: left;
+}
+.#{$p}right {
+    text-align: right;
+}
+
+.#{$p}tight {
+    letter-spacing: -1px;
+}
+.#{$p}wide {
+    letter-spacing: 5px;
+}
+
 @each $name, $size in $fontSizes {
-    .sw-#{$name} {
+    .#{$p}#{$name} {
         font-size: $size;
     }
 }
