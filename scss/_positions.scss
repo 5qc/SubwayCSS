@@ -1,6 +1,7 @@
 @import "int";
 
 $positions: top, left, right, bottom;
+$bar: $int solid;
 
 @each $pos in $positions {
     .sw-margin {
@@ -26,7 +27,7 @@ $positions: top, left, right, bottom;
     }
 
     .sw-bar-#{$pos} {
-        border-#{$pos}: var(--bar);
+        border-#{$pos}: $bar;
         @if $pos == "top" {
             width: 100%;
         } @else if $pos == "bottom" {
