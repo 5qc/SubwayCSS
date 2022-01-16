@@ -1,17 +1,17 @@
 @import "colors";
 @import "font";
+@import "mixins";
 @import "settings";
 
 $buttons: #{$p}button, #{$p}button-shadow, #{$p}button-border, #{$p}btn;
 
 @each $btn in $buttons {
     .#{$btn} {
+        @include font();
         background: $yellow;
         border: 2px solid $green;
-        font-family: $font;
         border-radius: 5px;
         font-size: 16px;
-        font-weight: $fw;
         transition: 0.25s filter, 0.25s box-shadow;
     }
     .#{$btn}:hover {
@@ -30,6 +30,12 @@ $buttons: #{$p}button, #{$p}button-shadow, #{$p}button-border, #{$p}btn;
         outline: none;
     }
 
+    .#{$p}btn:active {
+        border: none !important;
+        position: relative;
+        top: 2px;
+    }
+
     @each $name, $value in $colors {
         .#{$btn}.#{$p}#{$name} {
             background: $value;
@@ -42,12 +48,7 @@ $buttons: #{$p}button, #{$p}button-shadow, #{$p}button-border, #{$p}btn;
             background: $value;
             border-color: lighten($value, 20%) !important;
         }
-        
-        .#{$p}btn:active {
-            border: none !important;
-            position: relative;
-            top: 2px;
-        }
+
         .#{$p}btn.#{$p}#{$name} {
             border: none;
             border-bottom: 2px solid lighten($value, 20%);
