@@ -1,15 +1,16 @@
 @import "colors";
+@import "settings";
 
 $navbar: sw-navbar, sw-navbar-fixed;
 
 @each $nav in $navbar {
-    .sw-navbar {
+    .#{$p}navbar {
         position: absolute;
         top: 0;
         left: 0;
         background: rgba(255, 255, 255, 0.75);
     }
-    .sw-navbar-fixed {
+    .#{$p}navbar-fixed {
         position: fixed;
         top: 0;
         left: 0;
@@ -22,7 +23,7 @@ $navbar: sw-navbar, sw-navbar-fixed;
         padding: 5px 0px 5px 0px;
         width: 100%;
     }
-    .#{$nav} .sw-logo {
+    .#{$nav} .#{$p}logo {
         padding-right: 10px;
         padding-left: 10px;
         border-right: 1px solid $gray;
