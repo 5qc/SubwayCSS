@@ -51,3 +51,14 @@ $buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
         }
     }
 }
+
+@each $name, $value in $colors {
+    .#{$p}button.#{$p}#{$name},
+    .#{$p}button-shadow.#{$p}#{$name} {
+        background: $value;
+        border-color: $value;
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+}
