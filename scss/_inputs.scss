@@ -1,0 +1,50 @@
+@import "colors";
+@import "mixins";
+@import "settings";
+
+// Select
+.#{$p}select,
+.#{$p}select * {
+    @include font();
+}
+
+.#{$p}select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 3px;
+    border: 2px solid white;
+}
+.#{$p}select:focus {
+    outline: none;
+}
+
+@each $name, $value in $colors {
+    .#{$p}select.#{$p}#{$name} {
+        border: 2px solid $value;
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+}
+
+// Textarea
+.#{$p}textarea {
+    @include font();
+    background: transparent;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid $gray;
+    border-radius: 5px;
+}
+.#{$p}textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px lighten($black, 50%);
+}
+
+@each $name, $value in $colors {
+    .#{$p}textarea.#{$p}#{$name} {
+        background: transparent;
+        border-color: $value;
+    }
+}
