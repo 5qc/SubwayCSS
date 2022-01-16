@@ -1,22 +1,23 @@
 @import "colors";
+@import "settings";
 
-.sw-table {
+.#{$p}table {
     border-collapse: collapse;
     width: 100%;
 }
-.sw-table th,
-.sw-table td {
+.#{$p}table th,
+.#{$p}table td {
     padding: 5px;
 }
-.sw-table.sw-striped tr:nth-child(even),
-.sw-table.sw-all tr:nth-child(even) {
+.#{$p}table.#{$p}striped tr:nth-child(even),
+.#{$p}table.#{$p}all tr:nth-child(even) {
     background: #f1f1f1;
 }
-.sw-table.sw-bordered tr,
-.sw-table.sw-all tr {
+.#{$p}table.#{$p}bordered tr,
+.#{$p}table.#{$p}all tr {
     border-bottom: 1px solid $gray;
 }
-.sw-table.sw-border,
-.sw-table.sw-all {
+.#{$p}table.#{$p}border,
+.#{$p}table.#{$p}all {
     border: 1px solid $gray;
 }
