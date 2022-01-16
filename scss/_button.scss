@@ -1,5 +1,6 @@
 @import "colors";
 @import "font";
+@import "settings";
 
 $buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
 
@@ -27,24 +28,24 @@ $buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
     }
 
     @each $name, $value in $colors {
-        .#{$btn}.sw-#{$name} {
+        .#{$btn}.#{$p}#{$name} {
             background: $value;
             border-color: $value;
             @if $name == "dark-green" {
                 color: white;
             }
         }
-        .sw-button-border.sw-#{$name} {
+        .#{$p}button-border.#{$p}#{$name} {
             background: $value;
             border-color: lighten($value, 20%) !important;
         }
         
-        .sw-btn:active {
+        .#{$p}btn:active {
             border: none !important;
             position: relative;
             top: 2px;
         }
-        .sw-btn.sw-#{$name} {
+        .#{$p}btn.#{$p}#{$name} {
             border: none;
             border-bottom: 2px solid lighten($value, 20%);
         }
