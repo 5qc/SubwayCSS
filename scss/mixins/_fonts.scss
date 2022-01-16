@@ -1,0 +1,6 @@
+@import "../settings";
+
+@mixin font() {
+    font-family: $font;
+    font-weight: $fw;
+}
