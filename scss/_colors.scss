@@ -43,29 +43,6 @@ $green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%
             border-color: $value;
         }
     }
-
-    .#{$p}select,
-    .#{$p}select * {
-        font-family: "Roboto";
-        font-weight: 300;
-    }
-
-    .#{$p}select {
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        border-radius: 3px;
-        border: 2px solid white;
-    }
-    .#{$p}select:focus {
-        outline: none;
-    }
-    .#{$p}select.#{$p}#{$name} {
-        border: 2px solid $value;
-        @if $name == "dark-green" {
-            color: white;
-        }
-    }
 }
 
 .#{$p}text-yellow-green {
