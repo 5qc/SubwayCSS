@@ -1,0 +1,52 @@
+@import "colors";
+@import "font";
+
+$buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
+
+@each $btn in $buttons {
+    .#{$btn} {
+        background: var(--yellow);
+        border: 2px solid var(--green);
+        font-family: var(--font);
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: $fw;
+        transition: 0.25s filter;
+    }
+    .#{$btn}:hover {
+        filter: brightness(125%);
+        cursor: pointer;
+        transition: 0.25s filter;
+    }
+    .#{$btn}:active {
+        filter: brightness(90%);
+        transition: 0s filter;
+    }
+    .#{$btn}:focus {
+        outline: none;
+    }
+
+    @each $name, $value in $colors {
+        .#{$btn}.sw-#{$name} {
+            background: $value;
+            border-color: $value;
+            @if $name == "dark-green" {
+                color: white;
+            }
+        }
+        .sw-button-border.sw-#{$name} {
+            background: $value;
+            border-color: lighten($value, 20%) !important;
+        }
+        
+        .sw-btn:active {
+            border: none !important;
+            position: relative;
+            top: 2px;
+        }
+        .sw-btn.sw-#{$name} {
+            border: none;
+            border-bottom: 2px solid lighten($value, 20%);
+        }
+    }
+}
