@@ -1,0 +1,66 @@
+@import "colors";
+@import "settings";
+
+@each $name, $value in $colors {
+    .#{$p}container {
+        padding: $intPX;
+        position: relative;
+    }
+    .#{$p}container.#{$p}#{$name} {
+        @if $name == "dark-green" {
+            color: white;
+        }
+    }
+    .#{$p}container .#{$p}top {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        text-align: center;
+    }
+    .#{$p}container .#{$p}topleft {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        text-align: left;
+    }
+    .#{$p}container .#{$p}topright {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        text-align: right;
+    }
+    .#{$p}container .#{$p}bottom {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        text-align: center;
+    }
+    .#{$p}container .#{$p}bottomleft {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        text-align: left;
+    }
+    .#{$p}container .#{$p}bottomright {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        text-align: right;
+    }
+    .#{$p}container .#{$p}left {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translate(-0%, -50%);
+        text-align: left;
+    }
+    .#{$p}container .#{$p}right {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translate(-0%, -50%);
+        text-align: right;
+    }
+}
