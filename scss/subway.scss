@@ -4,9 +4,11 @@
 @import 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap';
 
 @import "bars";
+@import "border";
 @import "button";
 @import "colors";
 @import "font";
+@import "img";
 @import "int";
 @import "modal";
 @import "nav";
@@ -18,58 +20,4 @@ body {
     font-size: 16px;
     font-family: $font;
     font-weight: $fw;
-}
-
-a:link,
-a:hover,
-a:visited {
-    color: #00572d;
-    text-decoration: underline;
-}
-
-/** Alignments **/
-.sw-center {
-    text-align: center;
-}
-.sw-left {
-    text-align: left;
-}
-.sw-right {
-    text-align: right;
-}
-
-/** Borders **/
-/* Radius */
-.sw-round-small {
-    border-radius: 2px;
-}
-.sw-round,
-.sw-round-medium {
-    border-radius: 5px;    
-}
-.sw-round-large {
-    border-radius: 10px;
-}
-.sw-round-xlarge {
-    border-radius: 20px;
-}
-.sw-round-xxlarge {
-    border-radius: 40px;
-}
-.sw-circle {
-    border-radius: 50%;
-}
-
-/** Images **/
-img.sw-bordered {
-    border: 1px solid $gray;
-    padding: 5px;
-}
-
-/** Letter Spacing **/
-.sw-tight {
-    letter-spacing: -1px;
-}
-.sw-wide {
-    letter-spacing: 5px;
 }
