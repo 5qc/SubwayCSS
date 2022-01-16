@@ -1,3 +1,4 @@
+@import "int";
 @import "positions";
 
 $colors: (
@@ -16,6 +17,13 @@ $dark-green: #00491e;
 $gray: #c7c6c6;
 $white: #fff;
 $black: #000;
+
+$yellow-green: linear-gradient(to right, $yellow, $green);
+$yellow-green-s: linear-gradient(to right, $yellow 0%, $yellow 50%, $green 50%) 5;
+$yellow-green-s-b: linear-gradient(to bottom, $yellow 0%, $yellow 50%, $green 50%) 5;
+$green-yellow: linear-gradient(to right, $green, $yellow);
+$green-yellow-s: linear-gradient(to right, $green 0%, $green 50%, $yellow 50%) 5;
+$green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%) 5;
 
 @each $name, $value in $colors {
     .sw-button.sw-#{$name},
@@ -55,7 +63,7 @@ $black: #000;
     }
 
     .sw-container {
-        padding: var(--int);
+        padding: $int;
         position: relative;
     }
     .sw-container.sw-#{$name} {
@@ -138,4 +146,17 @@ $black: #000;
             color: white;
         }
     }
+}
+
+.sw-text-yellow-green {
+    background: $yellow-green;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.sw-text-green-yellow {
+    background: $green-yellow;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
