@@ -1,0 +1,23 @@
+@import "colors";
+@import "settings";
+
+$cardbr: 3px;
+
+.#{$p}card {
+    border: 2px solid $gray;
+    border-radius: 5px;
+    width: 286px;
+}
+.#{$p}card.#{$p}shadow {
+    box-shadow: 2px 2px 15px lighten($black, 50%);
+    border: none;
+}
+.#{$p}card img {
+    display: block;
+    border-radius: $cardbr $cardbr 0px 0px;
+    min-width: 286px;
+    max-width: 286px;
+}
+.#{$p}card .#{$p}desc {
+    padding: 2px;
+}
