@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 @import "positions";
 @import "settings";
 
@@ -7,30 +8,22 @@ $pos: fixed, absolute;
 
 @each $pos in $pos {
     .#{$p}bar-top-#{$pos} {
-        position: $pos;
-        top: 0;
-        left: 0;
+        @include bar(top, left, $pos);
         border-top: $bar;
         width: 100%;
     }
     .#{$p}bar-left-#{$pos} {
-        position: $pos;
-        top: 0;
-        left: 0;
+        @include bar(top, left, $pos);
         border-top: $bar;
-        width: 100%;
+        height: 100%;
     }
     .#{$p}bar-bottom-#{$pos} {
-        position: $pos;
-        bottom: 0;
-        left: 0;
+        @include bar(bottom, left, $pos);
         border-bottom: $bar;
         width: 100%;
     }
     .#{$p}bar-right-#{$pos} {
-        position: $pos;
-        top: 0;
-        right: 0;
+        @include bar(top, right, $pos);
         border-right: $bar;
         height: 100%;
     }
