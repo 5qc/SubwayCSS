@@ -2,7 +2,7 @@
 @import "font";
 @import "settings";
 
-$buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
+$buttons: #{$p}button, #{$p}button-shadow, #{$p}button-border, #{$p}btn;
 
 @each $btn in $buttons {
     .#{$btn} {
@@ -12,12 +12,15 @@ $buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
         border-radius: 5px;
         font-size: 16px;
         font-weight: $fw;
-        transition: 0.25s filter;
+        transition: 0.25s filter, 0.25s box-shadow;
     }
     .#{$btn}:hover {
         filter: brightness(125%);
         cursor: pointer;
-        transition: 0.25s filter;
+        transition: 0.25s filter, 0.25s box-shadow;
+        @if $btn == "#{$p}button-shadow" {
+            box-shadow: 2px 2px 5px lighten($black, 50%);
+        }
     }
     .#{$btn}:active {
         filter: brightness(90%);
