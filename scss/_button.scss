@@ -5,9 +5,9 @@ $buttons: sw-button, sw-button-shadow, sw-button-border, sw-btn;
 
 @each $btn in $buttons {
     .#{$btn} {
-        background: var(--yellow);
-        border: 2px solid var(--green);
-        font-family: var(--font);
+        background: $yellow;
+        border: 2px solid $green;
+        font-family: $font;
         border-radius: 5px;
         font-size: 16px;
         font-weight: $fw;
