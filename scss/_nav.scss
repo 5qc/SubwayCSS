@@ -19,7 +19,7 @@ $navbar: sw-navbar, sw-navbar-fixed;
     .#{$nav} {
         z-index: 999;
         font-size: 40px;
-        padding: 5px;
+        padding: 5px 0px 5px 0px;
         width: 100%;
     }
     .#{$nav} .sw-logo {
