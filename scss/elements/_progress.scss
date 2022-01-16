@@ -1,0 +1,55 @@
+@import "../colors";
+@import "../settings";
+
+.#{$p}progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+
+    &::-webkit-progress-bar {
+        background: $yellow;
+    }
+    &::-webkit-progress-value {
+        background: $green;
+    }
+    &::-moz-progress-bar {
+        background: $green;
+    }
+    &::-ms-fill {
+        background: $green;
+        border: none;
+    }
+}
+
+@each $name, $value in $colors {
+    .#{$p}progress.#{$p}#{$name}::-webkit-progress-bar {
+        @if $name == black {
+            background: lighten($value, 30%);
+        } @else {
+            background: lighten($value, 10%);
+        }
+    }
+    .#{$p}progress.#{$p}#{$name}::-webkit-progress-value {
+        background: $value;
+    }
+    .#{$p}progress.#{$p}#{$name}::-moz-progress-bar {
+        background: $value;
+    }
+    .#{$p}progress.#{$p}#{$name}::-ms-fill {
+        background: $value;
+        border: none;
+    }
+}
+.#{$p}progress.#{$p}green-yellow::-webkit-progress-bar {
+    background: $green;
+}
+.#{$p}progress.#{$p}green-yellow::-webkit-progress-value {
+    background: $yellow;
+}
+.#{$p}progress.#{$p}green-yellow::-moz-progress-bar {
+    background: $yellow;
+}
+.#{$p}progress.#{$p}green-yellow::-ms-fill {
+    background: $yellow;
+    border: none;
+}
