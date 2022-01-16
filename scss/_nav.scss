@@ -42,4 +42,10 @@ $navbar: sw-navbar, sw-navbar-fixed;
         display: block;
         padding: 0px 15px 0px 15px;
     }
+
+    @each $name, $value in $colors {
+        .#{$p}#{$nav}.#{$p}#{$name} {
+            background: rgba($value, 0.75)
+        }
+    }
 }
