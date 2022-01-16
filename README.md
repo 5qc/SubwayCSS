@@ -1,4 +1,4 @@
-![SubwayCSS Logo, White](https://raw.githubusercontent.com/5qc/cdn/main/img/SubwayCSSLogoWhite.png)
+![SubwayCSS Logo, White](https://raw.githubusercontent.com/5qc/cdn/main/img/SubwayCSS%20Logo.png)
 **SubwayCSS** is a sleek, brand-new CSS framework that turns your site into the great American multinational sandwich shop!
 
 ## Table of Contents
