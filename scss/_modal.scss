@@ -1,4 +1,6 @@
-.sw-modal {
+@import "settings";
+
+.#{$p}modal {
     background: #0009;
     position: absolute;
     top: 0;
@@ -8,7 +10,7 @@
     z-index: 10;
     display: none;
 }
-.sw-modal .sw-modal-content {
+.#{$p}modal .#{$p}modal-content {
     margin-top: 10%;
     position: absolute;
     top: 0;
