@@ -1,0 +1,44 @@
+$fontSizes: (
+    tiny: 10px,
+    small: 12px,
+    medium: 16px,
+    large: 18px,
+    xlarge: 24px,
+    xxlarge: 36px,
+    xxxlarge: 48px,
+    jumbo: 64px
+);
+$fw: 300;
+
+.sw-font-light {
+    font-family: "Unisect Light", sans-serif;
+    font-weight: 300;
+}
+.sw-font {
+    font-family: "Unisect", sans-serif;
+}
+.sw-font-bold {
+    font-family: "Unisect Bold", sans-serif;
+    font-weight: 700;
+}
+.sw-font-black {
+    font-family: "Unisect Black", sans-serif;
+    font-weight: 900;
+}
+.sw-font-italic {
+    font-family: "Unisect Oblique", sans-serif;
+    font-style: italic;
+}
+.sw-font-light,
+.sw-font,
+.sw-font-bold,
+.sw-font-black,
+.sw-font-italic {
+    letter-spacing: -1px;
+}
+
+@each $name, $size in $fontSizes {
+    .sw-#{$name} {
+        font-size: $size;
+    }
+}
