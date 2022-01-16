@@ -1,5 +1,3 @@
-@import "../settings";
-
 @mixin bar($pos1, $pos2, $position) {
     position: $position;
     $pos1: 0;
