@@ -1,3 +1,5 @@
+@import "colors";
+@import "positions";
 @import "settings";
 
 .#{$p}round-small {
@@ -18,4 +20,14 @@
 }
 .#{$p}circle {
     border-radius: 50%;
+}
+
+.#{$p}border {
+    border: 1px solid $gray;
+}
+
+@each $pos in $positions {
+    .#{$p}border-#{$pos} {
+        border-#{$pos}: 1px solid $gray;
+    }
 }
