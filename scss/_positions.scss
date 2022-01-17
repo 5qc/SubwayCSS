@@ -1,6 +1,7 @@
 @import "settings";
 
 $positions: top, left, right, bottom;
+$positionss: relative, absolute, fixed;
 $bar: $intPX solid;
 
 @each $pos in $positions {
@@ -35,5 +36,11 @@ $bar: $intPX solid;
         } @else {
             height: 100%;
         }
+    }
+}
+
+@each $pos in $positions {
+    .#{$p}#{$pos} {
+        position: $pos;
     }
 }
