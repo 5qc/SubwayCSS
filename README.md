@@ -20,7 +20,7 @@ And if you want to locally host your own version of SubwayCSS, just download the
 Customizing SubwayCSS is really easy, as there is only one file that controls all (actually most) of the settings, `_settings.scss`. From that file, you can control the font, font weight, and even the class prefix.
 
 ## Reporting Bugs
-If you found a bug within SubwayCSS, first search through the [https://github.com/5qc/SubwayCSS/issues](issues) that are currently open or closed within this GitHub project. If the bug you found is not there, you can either report it through the issue tab or create a [https://github.com/5qc/SubwayCSS/pulls](pull request).
+If you found a bug within SubwayCSS, first search through the [issues](https://github.com/5qc/SubwayCSS/issues) that are currently open or closed within this GitHub project. If the bug you found is not there, you can either report it through the issue tab or create a [pull request](https://github.com/5qc/SubwayCSS/pulls).
 
 ## Creators
 ### roc0ast3r (5qc/ro)
