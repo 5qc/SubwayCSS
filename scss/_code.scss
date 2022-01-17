@@ -1,0 +1,14 @@
+@import "settings";
+
+.#{$p}code {
+    font-family: "Roboto Mono";
+    font-weight: normal;
+    font-size: $fs;
+    background: #f8f8f8;
+    padding: 5px;
+    border-radius: 5px;
+}
+.#{$p}code.#{$p}dark {
+    background: #222;
+    color: #f8f8f8;
+}
