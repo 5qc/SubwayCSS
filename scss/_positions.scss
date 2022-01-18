@@ -18,12 +18,19 @@ $bar: $intPX solid;
     .#{$p}padding-#{$pos} {
         padding-#{$pos}: $intPX;
     }
-    @for $i from 1 through 5 {
+    @for $i from 1 through 10 {
         .#{$p}padding#{$i} {
-            padding: #{$i}#{"%"}
+            padding: #{$i * 10}px;
         }
         .#{$p}padding#{$i}-#{$pos} {
-            padding-#{$pos}: #{$i}#{"%"}
+            padding-#{$pos}: #{$i * 10}px;
+        }
+
+        .#{$p}margin#{$i} {
+            margin: #{$i * 10}px;
+        }
+        .#{$p}margin#{$i}-#{$pos} {
+            padding-#{$pos}: #{$i * 10}px;
         }
     }
 
@@ -39,7 +46,7 @@ $bar: $intPX solid;
     }
 }
 
-@each $pos in $positions {
+@each $pos in $positionss {
     .#{$p}#{$pos} {
         position: $pos;
     }
