@@ -1,4 +1,4 @@
-> ***NOTE**: SubwayCSS is still in beta release, so expect bugs and/or major issues. If you find any, please report them in the issues section [issues](https://github.com/5qc/SubwayCSS/issues).*
+> ***NOTE**: SubwayCSS is still in beta release, so expect bugs and/or major issues. If you find any, please report them in the [issues section](https://github.com/5qc/SubwayCSS/issues).*
 
 ![SubwayCSS Logo, White](https://raw.githubusercontent.com/5qc/cdn/main/img/SubwayCSS%20Logo.png)
 **SubwayCSS** is a sleek, brand-new CSS framework that turns your site into the great American multinational sandwich shop!
