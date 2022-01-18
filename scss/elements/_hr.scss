@@ -1,0 +1,15 @@
+@import "../colors";
+
+$hrBorder: 1px solid;
+
+hr {
+    background: none;
+    border-top: $hrBorder $gray;
+    width: 100%;
+}
+
+@each $color, $val in $colors {
+    hr.#{$p}#{$color} {
+        border-top: $hrBorder $val;
+    }
+}
