@@ -1,66 +1,91 @@
 @import "colors";
 @import "settings";
 
-@each $name, $value in $colors {
-    .#{$p}container {
-        padding: $intPX;
-        position: relative;
+$width: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100;
+
+.#{$p}container {
+    padding: $intPX;
+    position: relative;
+}
+.#{$p}container.#{$p}center {
+    margin: auto;
+}
+
+@each $val in $width {
+    .#{$p}#{$val} {
+        width: #{$val}#{"%"}
     }
+}
+
+.#{$p}container .#{$p}top {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    text-align: center;
+}
+.#{$p}container .#{$p}topleft {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    text-align: left;
+}
+.#{$p}container .#{$p}topright {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-align: right;
+}
+.#{$p}container .#{$p}bottom {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    text-align: center;
+}
+.#{$p}container .#{$p}bottomleft {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    text-align: left;
+}
+.#{$p}container .#{$p}bottomright {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: right;
+}
+.#{$p}container .#{$p}left {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translate(-0%, -50%);
+    text-align: left;
+}
+.#{$p}container .#{$p}right {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-0%, -50%);
+    text-align: right;
+}
+
+@each $name, $value in $colors {
     .#{$p}container.#{$p}#{$name} {
         @if $name == "dark-green" {
             color: white;
         }
     }
-    .#{$p}container .#{$p}top {
-        position: absolute;
-        top: 5px;
-        left: 50%;
-        transform: translate(-50%, -0%);
-        text-align: center;
-    }
-    .#{$p}container .#{$p}topleft {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        text-align: left;
-    }
-    .#{$p}container .#{$p}topright {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        text-align: right;
-    }
-    .#{$p}container .#{$p}bottom {
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        transform: translate(-50%, -0%);
-        text-align: center;
-    }
-    .#{$p}container .#{$p}bottomleft {
-        position: absolute;
-        bottom: 5px;
-        left: 5px;
-        text-align: left;
-    }
-    .#{$p}container .#{$p}bottomright {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
-        text-align: right;
-    }
-    .#{$p}container .#{$p}left {
-        position: absolute;
-        top: 50%;
-        left: 5px;
-        transform: translate(-0%, -50%);
-        text-align: left;
-    }
-    .#{$p}container .#{$p}right {
-        position: absolute;
-        top: 50%;
-        right: 5px;
-        transform: translate(-0%, -50%);
-        text-align: right;
-    }
+}
+.#{$p}container.#{$p}yellow-green {
+    background: $yellow-green;
+}
+.#{$p}container.#{$p}yellow-green-s {
+    background: $yellow-green-s;
+}
+.#{$p}container.#{$p}green-yellow {
+    background: $green-yellow;
+}
+.#{$p}container.#{$p}green-yellow-s {
+    background: $green-yellow-s;
 }
