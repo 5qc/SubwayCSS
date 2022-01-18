@@ -1,0 +1,14 @@
+@import "settings";
+
+@media screen and (max-width: 600px) {
+    .#{$p}navbar,
+    .#{$p}navbar-fixed {
+        text-align: center;
+    }
+    .#{$p}navbar .#{$p}logo,
+    .#{$p}navbar-fixed .#{$p}logo {
+        padding: none;
+        border: none;
+        width: 100%;
+    }   
+}
