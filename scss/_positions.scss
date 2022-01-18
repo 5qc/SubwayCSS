@@ -30,7 +30,7 @@ $bar: $intPX solid;
             margin: #{$i * 10}px;
         }
         .#{$p}margin#{$i}-#{$pos} {
-            padding-#{$pos}: #{$i * 10}px;
+            margin-#{$pos}: #{$i * 10}px;
         }
     }
 
