@@ -1,0 +1,9 @@
+@import "../settings";
+@import "../font";
+
+body {
+    margin: 0;
+    font-size: $fs;
+    font-family: $font;
+    font-weight: $fw;
+}
