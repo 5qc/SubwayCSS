@@ -1,0 +1,15 @@
+@import "colors";
+@import "settings";
+
+@each $name, $value in $colors {
+    .#{$p}#{$name}\:hover:hover,
+    .#{$p}#{$name}\:active:active,
+    .#{$p}#{$name}\:focus:focus {
+        background: $value;
+    }
+    .#{$p}text-#{$name}\:hover:hover,
+    .#{$p}text-#{$name}\:active:active,
+    .#{$p}text-#{$name}\:focus:focus {
+        color: $value;
+    }
+}
