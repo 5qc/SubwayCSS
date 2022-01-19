@@ -1,0 +1,112 @@
+@use "sass:string";
+@import "functions";
+@import "mixins";
+@import "settings";
+
+$animations: top, bottom, left, right, fade-in, fade-out, fade-in-out, zoom;
+
+@each $anim in $animations {
+    .sw-animation\[#{$anim}\] {
+        position: relative;
+        animation-name: $anim;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+
+        @if $anim == "fade-in-out" {
+            animation-duration: 3s !important;
+        } @else {
+            animation-duration: 1s;
+        }
+    }
+
+    @each $value in $transitionValues {
+        .sw-animation\[#{$anim}\,#{$value}s\] {
+            position: relative;
+            animation-name: $anim;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-duration: str-replace(string.unquote($value), "\\.", ".") + s
+        }
+    }
+}
+
+@keyframes top {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+@keyframes bottom {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+@keyframes left {
+    from {
+        left: -300px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 0;
+    }
+}
+@keyframes right {
+    from {
+        right: -300px;
+        opacity: 0;
+    }
+    to {
+        right: 0px;
+        opacity: 0;
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes fade-in-out {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
