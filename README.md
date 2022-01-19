@@ -11,9 +11,13 @@
 * [License](#license)
 
 ## Installation
-Becuase SubwayCSS is really new, one of two ways to install SubwayCSS onto your website is by injecting this line of code into your HTML file:
+To put SubwayCSS into your site, just install the following code:
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/5qc/SubwayCSS/main/subway.min.css" />
+<link rel="stylesheet" href="https://subwaycss.glitch.me/latest/subway.min.css" />
+```
+Or if you want a specific version of SubwayCSS:
+```html
+<link rel="stylesheet" href="https://subwaycss.glitch.me/vx.x.x/subway.min.css" />
 ```
 
 And if you want to locally host your own version of SubwayCSS, just download the content from the raw file and import the file location into your HTML project.
