@@ -1,4 +1,4 @@
-> ***NOTE**: SubwayCSS is still in beta release, so expect bugs and/or major issues. If you find any, please report them in the [issues section](https://github.com/5qc/SubwayCSS/issues).*
+> ***NOTE**: CDN is currently broken right now. I am currently working on getting CDN working for SubwayCSS. As this is happening, I still want people to enjoy new SubwayCSS, so there will be a temporary `subway.min.css` file here.*
 
 ![SubwayCSS Logo, White](https://raw.githubusercontent.com/5qc/cdn/main/img/SubwayCSS%20Logo.png)
 **SubwayCSS** is a sleek, brand-new CSS framework that turns your site into the great American multinational sandwich shop!
