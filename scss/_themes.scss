@@ -1,0 +1,40 @@
+@import "colors";
+@import "nav";
+@import "settings";
+
+@media (prefers-color-scheme: dark) {
+    @each $name, $value in $colors {
+        .#{$p}#{$name}\:dark {
+            background: $value !important;
+        }
+        .#{$p}text-#{$name}\:dark {
+            color: $value !important;
+        }
+
+        @each $nav in $navbar {
+            .#{$nav}.#{$p}#{$name}\:dark {
+                background: rgba($value, 0.75) !important;
+            }
+        }
+
+        .#{$p}#{$name}\:hover\:dark:hover,
+        .#{$p}#{$name}\:active\:dark:active,
+        .#{$p}#{$name}\:focus\:dark:focus {
+            background: $value !important;
+        }
+        .#{$p}text-#{$name}\:hover\:dark:hover,
+        .#{$p}text-#{$name}\:active\:dark:active,
+        .#{$p}text-#{$name}\:focus\:dark:focus {
+            color: $value !important;
+        }
+
+        .#{$p}#{$name}\:sel\:dark::selection,
+        .#{$p}#{$name}\:sel\:dark *::selection {
+            background-color: $value !important;
+        }
+        .#{$p}text-#{$name}\:sel\:dark::selection,
+        .#{$p}text-#{$name}\:sel\:dark *::selection {
+            color: $value !important;
+        }
+    }
+}
