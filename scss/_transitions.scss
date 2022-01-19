@@ -1,0 +1,13 @@
+@use "sass:string";
+@import "colors";
+@import "functions";
+@import "settings";
+
+@each $value in $transitionValues {
+    .#{$p}transition\[bg\,#{$value}\] {
+        transition: str-replace(string.unquote($value), "\\.", ".") + s background-color;
+    }
+    .#{$p}transition\[text\,#{$value}\] {
+        transition: str-replace(string.unquote($value), "\\.", ".") + s color;
+    }
+}
