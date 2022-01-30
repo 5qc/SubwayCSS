@@ -1,5 +1,24 @@
 @import "settings";
 
+$weights: (
+    thin: 100,
+    extra-light: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    black: 900,
+    extra-black: 950
+);
+
+@each $name, $val in $weights {
+    .#{$p}fw-#{$name} {
+        font-weight: $val;
+    }
+}
+
 .#{$p}font-light {
     font-family: "Unisect Light", sans-serif;
     font-weight: 300;
