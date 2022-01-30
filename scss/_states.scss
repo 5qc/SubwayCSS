@@ -2,28 +2,28 @@
 @import "font";
 @import "settings";
 
-@each $name, $value in $colors {
-    .#{$p}#{$name}\:hover:hover,
-    .#{$p}#{$name}\:active:active,
-    .#{$p}#{$name}\:focus:focus,
-    .#{$p}#{$name}\:sel::selection,
-    .#{$p}#{$name}\:sel *::selection {
-        background: $value;
+$states: (
+    hover: hover,
+    active: active,
+    focus: focus,
+    sel: selection
+);
+
+@each $class, $sel in $states {
+    @each $name, $value in $colors {
+        .#{$p}#{$name}\:#{$class}::#{$sel},
+        .#{$p}#{$name}\:#{$class} *::#{$sel} {
+            background: $value;
+        }
+        .#{$p}text-#{$name}\:#{$class}::#{$sel},
+        .#{$p}text-#{$name}\:#{$class} *::#{$sel} {
+            color: $value;
+        }
     }
-    .#{$p}text-#{$name}\:hover:hover,
-    .#{$p}text-#{$name}\:active:active,
-    .#{$p}text-#{$name}\:focus:focus,
-    .#{$p}text-#{$name}\:sel::selection,
-    .#{$p}text-#{$name}\:sel *::selection {
-        color: $value;
-    }
-}
-@each $name, $value in $weights {
-    .#{$p}fw-#{$name}\:hover:hover,
-    .#{$p}fw-#{$name}\:active:active,
-    .#{$p}fw-#{$name}\:focus:focus,
-    .#{$p}fw-#{$name}\:sel::selection,
-    .#{$p}fw-#{$name}\:sel *::selection {
-        font-weight: $value;
+    @each $name, $value in $weights {
+        .#{$p}fw-#{$name}\:#{$class}::#{$sel},
+        .#{$p}fw-#{$name}\:#{$class} *::#{$sel} {
+            font-weight: $value;
+        }
     }
 }
