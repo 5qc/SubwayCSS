@@ -1,0 +1,17 @@
+@use "sass:math";
+@import "settings";
+
+@for $i from 1 through 10 {
+    .#{$p}row-#{$i} {
+        display: flex;
+        flex-wrap: wrap;
+
+        .#{$p}col {
+            $flexRowCalc: #{"100%"}#{" "}/#{" "}#{$i};
+
+            width: -webkit-calc(#{$flexRowCalc});
+            width: -moz-calc(#{$flexRowCalc});
+            width: calc(#{$flexRowCalc});
+        }
+    }
+}
