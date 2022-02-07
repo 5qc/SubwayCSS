@@ -1,0 +1,46 @@
+@import "colors";
+@import "positions";
+
+@each $color, $value in $colors {
+    .#{$p}each\[#{$color}\] > * {
+        background: #{$value};
+    }
+    .#{$p}each\[text-#{$color}\] > * {
+        color: #{$value};
+    }
+}
+
+@each $pos in $positions {
+    .#{$p}each\[margin\] {
+        margin: $intPX;
+    }
+    .#{$p}each\[margin-#{$pos}\] {
+        margin-#{$pos}: $intPX;
+    }
+
+    .#{$p}each\[padding\] {
+        padding: $intPX;
+    }
+    .#{$p}each\[padding-#{$pos}\] {
+        padding-#{$pos}: $intPX;
+    }
+    @for $i from 1 through 10 {
+        .#{$p}each\[padding#{$i}\] {
+            padding: #{$i * 10}px;
+        }
+        .#{$p}each\[padding#{$i}-#{$pos}\] {
+            padding-#{$pos}: #{$i * 10}px;
+        }
+
+        .#{$p}each\[margin#{$i}\] {
+            margin: #{$i * 10}px;
+        }
+        .#{$p}each\[margin#{$i}-#{$pos}\] {
+            margin-#{$pos}: #{$i * 10}px;
+        }
+    }
+
+    .#{$p}each\[border-#{$pos}\] > * {
+        border-#{$pos}: 1px solid $gray;
+    }
+}
