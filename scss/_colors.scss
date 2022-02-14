@@ -9,7 +9,8 @@ $colors: (
     orange: #ff5c39,
     yellow: #fdb400,
     green: #008c2b,
-    dark-green: #00491e
+    dark-green: #00491e,
+    purple: #4c006a
 );
 $black: #000;
 $gray: #c7c6c6;
@@ -19,6 +20,7 @@ $orange: #ff5c39;
 $yellow: #fdb400;
 $green: #008c2b;
 $dark-green: #00491e;
+$purple: #4c006a;
 
 $yellow-green: linear-gradient(to right, $yellow, $green);
 $yellow-green-s: linear-gradient(to right, $yellow 0%, $yellow 50%, $green 50%) 5;
