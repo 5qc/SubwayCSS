@@ -1,22 +1,99 @@
+@use "sass:math";
 @import "colors";
 @import "mixins";
 @import "settings";
 
-// Select
-.#{$p}select,
-.#{$p}select * {
+// Inputs
+.#{$p}input {
+    $inputBorderColor: rgba(black, 0.25);
+    $inputBorderWidth: 2px;
+    $inputBorderRadius: 10px;
+
     @include font();
+    padding: 2px;
+    background: transparent;
+    border: {
+        width: $inputBorderWidth;
+        style: solid;
+        color: $inputBorderColor;
+        radius: $inputBorderRadius;
+    }
+
+    &, &:hover, &:focus {
+        transition: 0.25s border-radius;
+    }
+    &:hover, &:focus {
+        border: {
+            radius: math.div($inputBorderRadius, 2);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.#{$p}no-border {
+        &, &:hover, &:focus {
+            border: {
+                width: 0px;
+                color: transparent;
+                radius: 0px;
+            }
+        }
+        padding: 0px;
+    }
+    &.#{$p}border-left, &.#{$p}border-right, &.#{$p}border-bottom, &.#{$p}border-top {
+        &, &:hover, &:focus {
+            border: {
+                radius: 0px;
+            }
+        }
+    }
+    &.#{$p}border-left {
+        border: {
+            top: none;
+            right: none;
+            bottom: none;
+        }
+    }
+    &.#{$p}border-right {
+        border: {
+            top: none;
+            left: none;
+            bottom: none;
+        }
+    }
+    &.#{$p}border-bottom {
+        border: {
+            top: none;
+            left: none;
+            right: none;
+        }
+    }
+    &.#{$p}border-top {
+        border: {
+            bottom: none;
+            left: none;
+            right: none;
+        }
+    }
 }
 
+// Select
 .#{$p}select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     border-radius: 3px;
     border: 2px solid white;
-}
-.#{$p}select:focus {
-    outline: none;
+
+    &, & * {
+        @include font();
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 @each $name, $value in $colors {
