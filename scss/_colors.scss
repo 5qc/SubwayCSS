@@ -61,10 +61,3 @@ $green-yellow-s-b: linear-gradient(to bottom, $green 0%, $green 50%, $yellow 50%
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-a:link,
-a:hover,
-a:visited {
-    color: #00572d;
-    text-decoration: underline;
-}
