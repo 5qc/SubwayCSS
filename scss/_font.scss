@@ -13,6 +13,10 @@ $weights: (
     extra-black: 950
 );
 
+code, kbd, pre, samp {
+    font-family: $fontMono;
+}
+
 @each $name, $val in $weights {
     .#{$p}fw-#{$name} {
         font-weight: $val;
