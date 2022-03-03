@@ -1,0 +1,16 @@
+@import "../colors";
+@import "../settings";
+
+a {
+    &:link {
+        color: $green;
+        text-decoration: underline;
+    }
+    &:hover {
+        color: $green;
+        text-decoration: none;
+    }
+    &:visited {
+        color: $dark-green;
+    }
+}
